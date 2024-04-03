@@ -13,10 +13,15 @@ public class TurmaController {
 	public static Route home = (req, res) -> {
 		
 		String html = "<h2>Incluir:</h2>"
+				+  "<p>/turma/incluir</p>"
 				+ "<h2>Remover:</h2>"
+				+ "<p>/turma/deletar/:id</p>"
 				+ "<h2>Obter:</h2>"
+				+ "<p>/turma/obter/:id</p>"
 				+ "<h2>Obter Lista: </h2>"
-				+ "<h2>Atualizar:</h2>";
+				+ "<p>/turma/obter-lista</p>"
+				+ "<h2>Atualizar:</h2>"
+				+ "<p>/turma/atualizar/:id</p>";
 		
 		return html;
 		

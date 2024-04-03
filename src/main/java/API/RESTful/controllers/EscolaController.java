@@ -11,10 +11,15 @@ public class EscolaController {
 public static Route home = (req, res) -> {
 		
 		String html = "<h2>Incluir:</h2>"
+				+  "<p>/escola/incluir</p>"
 				+ "<h2>Remover:</h2>"
+				+ "<p>/escola/deletar/:id</p>"
 				+ "<h2>Obter:</h2>"
+				+ "<p>/escola/obter/:id</p>"
 				+ "<h2>Obter Lista: </h2>"
-				+ "<h2>Atualizar:</h2>";
+				+ "<p>/escola/obter-lista</p>"
+				+ "<h2>Atualizar:</h2>"
+				+ "<p>/escola/atualizar/:id</p>";
 		
 		return html;
 		
