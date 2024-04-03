@@ -6,6 +6,7 @@ public class Escola {
 	private String nome;
 	private Diretor diretor;
 	// private List<Turma> turmas; NO BIDIRECTIONAL RELATIONSHIP BECAUSE OF JSON.
+	// Objects serving as "FKs".
 	
 	public Escola(int id, String nome, Diretor diretor) {
 		this.id = id;

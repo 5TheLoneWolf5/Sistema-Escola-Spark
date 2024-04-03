@@ -5,6 +5,7 @@ import API.RESTful.controllers.DiretorController;
 import API.RESTful.controllers.EscolaController;
 import API.RESTful.controllers.ProfessorController;
 import API.RESTful.controllers.TurmaController;
+import API.RESTful.controllers.ViaCepController;
 import spark.Spark;
 
 public class App 
@@ -59,7 +60,8 @@ public class App
         Spark.get("/escola/obter-lista", EscolaController.obterLista);
         Spark.put("/escola/atualizar/:id", EscolaController.atualizar);
         
-         // Rotas de "ViaCep".
+         // Rota de "ViaCep".
+        Spark.get("/viacep/:cep", ViaCepController.getAddress);
         
         // There needs to be at least 1 HTTP method in order for the program to run.
     }

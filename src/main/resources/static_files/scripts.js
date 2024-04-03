@@ -24,3 +24,42 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
 });
+
+// API Script.
+
+const cepBotao = document.getElementById("cepBotao");
+const cepTexto = document.getElementById("cepTexto");;
+const resultado = document.querySelector("#resultado");;
+
+cepBotao.addEventListener("click", () => {
+	
+	const cep = cepTexto.value;
+	const url = "/viacep/" + cep;
+
+	fetch(url)
+		.then(response => response.json())
+		.then(json => {
+			
+			jsonString = JSON.stringify(json);
+			console.log(jsonString)
+			
+			jsonString = jsonString.replace(/"|{|}/gi, "");
+			console.log(jsonString)
+			const array = jsonString.split(",");
+			console.log(array)
+			let result = "<br />"; // If value is undefined, it will therefore print "undefined".
+			
+			for (let i = 0; i < array.length; i++) {
+				
+				currentField = array[i].split(":");
+				
+				result += `${currentField[0]}: ${currentField[1]}<br />`
+				
+			}
+			
+			resultado.innerHTML = result;
+			
+		})
+		.catch(erro => console.error("Erro:", erro));
+	
+});

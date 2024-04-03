@@ -10,6 +10,8 @@ public class AlunoController {
 	
 	public static Route home = (req, res) -> {
 		
+		res.type("text/html");
+		
 		String html = "<h2>Incluir:</h2>"
 				+  "<p>/aluno/incluir</p>"
 				+ "<h2>Remover:</h2>"
@@ -44,7 +46,7 @@ public class AlunoController {
 		
 		Integer index = Integer.valueOf(req.params("id"));
 		
-		Aluno aluno = AlunoService.obter(index); // Getting this var before it is deleted.
+		Aluno aluno = AlunoService.obter(index); // Getting this variable before it is deleted.
 		
 		AlunoService.excluir(index);
 		

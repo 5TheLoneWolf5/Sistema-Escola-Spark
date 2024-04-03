@@ -11,18 +11,17 @@ import spark.Route;
 
 public class ViaCepController {
 	
-	public static Route home = (Request req, Response res) -> { 
-		return null;
-	};
-	
 	public static Route getAddress = (Request req, Response res) -> {
 		
 		String cep = req.params("cep");
 		String url = "https://viacep.com.br/ws/" + cep + "/json";
+		System.out.println(url);
 		
 		HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
 		
 		int responseCode = connection.getResponseCode();
+		
+		System.out.println(responseCode);
 		
 		if (responseCode == HttpURLConnection.HTTP_OK) {
 			

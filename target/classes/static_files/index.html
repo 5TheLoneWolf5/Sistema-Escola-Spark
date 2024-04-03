@@ -67,11 +67,58 @@
 	                </div>
 	                <hr />
 	                <div class="mx-auto container-links">
-	                	<a target="_blank"><h4 style="text-align: center; vertical-align: middle;">Rotas</h4></a>
+	                	<h4 style="text-align: center; vertical-align: middle;">Rotas</h4>
+	                	<p>
+							// Rotas de "Aluno".
+        Spark.get("/aluno", AlunoController.home);
+        Spark.post("/aluno/incluir", AlunoController.incluir);
+        Spark.delete("/aluno/deletar/:id", AlunoController.excluir);
+        Spark.get("/aluno/obter/:id", AlunoController.obter);
+        Spark.get("/aluno/obter-lista", AlunoController.obterLista);
+        Spark.put("/aluno/atualizar/:id", AlunoController.atualizar);
+        
+        // Rotas de "Professor".
+        Spark.get("/professor", ProfessorController.home);
+        Spark.post("/professor/incluir", ProfessorController.incluir);
+        Spark.delete("/professor/deletar/:id", ProfessorController.excluir);
+        Spark.get("/professor/obter/:id", ProfessorController.obter);
+        Spark.get("/professor/obter-lista", ProfessorController.obterLista);
+        Spark.put("/professor/atualizar/:id", ProfessorController.atualizar);
+	        
+	     // Rotas de "Turma".
+        Spark.get("/turma", TurmaController.home);
+        Spark.post("/turma/incluir", TurmaController.incluir);
+        Spark.delete("/turma/deletar/:id", TurmaController.excluir);
+        Spark.get("/turma/obter/:id", TurmaController.obter);
+        Spark.get("/turma/obter-lista", TurmaController.obterLista);
+        Spark.put("/turma/atualizar/:id", TurmaController.atualizar);
+	        
+	     // Rotas de "Diretor".
+        Spark.get("/diretor", DiretorController.home);
+        Spark.post("/diretor/incluir", DiretorController.incluir);
+        Spark.delete("/diretor/deletar/:id", DiretorController.excluir);
+        Spark.get("/diretor/obter/:id", DiretorController.obter);
+        Spark.get("/diretor/obter-lista", DiretorController.obterLista);
+        Spark.put("/diretor/atualizar/:id", DiretorController.atualizar);
+	        
+	     // Rotas de "Escola".
+        Spark.get("/escola", EscolaController.home);
+        Spark.post("/escola/incluir", EscolaController.incluir);
+        Spark.delete("/escola/deletar/:id", EscolaController.excluir);
+        Spark.get("/escola/obter/:id", EscolaController.obter);
+        Spark.get("/escola/obter-lista", EscolaController.obterLista);
+        Spark.put("/escola/atualizar/:id", EscolaController.atualizar);
+						</p>
 	                </div>
 	                <hr />
 	                <div class="mx-auto container-links">
-	                	<a target="_blank"><h4 style="text-align: center; vertical-align: middle;">Consumo da API (ViaCEP)</h4></a>
+	                	<h4 style="text-align: center; vertical-align: middle;">Consumo da API (ViaCEP)</h4>
+	                	<form style="text-align: center; vertical-align: middle;">
+	                		<label for="cepTexto">CEP (sem caracteres especiais):</label>
+	                		<input id="cepTexto" name="cepTexto" type="text" />
+	                		<input id="cepBotao" type="button" value="Pesquisar" />
+	                		<p id="resultado"></p>
+	                	</form>
 	                </div>
 	                <hr />
                 </section>
