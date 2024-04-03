@@ -31,7 +31,9 @@ const cepBotao = document.getElementById("cepBotao");
 const cepTexto = document.getElementById("cepTexto");;
 const resultado = document.querySelector("#resultado");;
 
-cepBotao.addEventListener("click", () => {
+cepBotao.addEventListener("click", event => {
+	
+	event.preventDefault();
 	
 	const cep = cepTexto.value;
 	const url = "/viacep/" + cep;
@@ -60,6 +62,6 @@ cepBotao.addEventListener("click", () => {
 			resultado.innerHTML = result;
 			
 		})
-		.catch(erro => console.error("Erro:", erro));
+		.catch(erro => resultado.innerHTML = `<br />Digite um CPF <strong>válido</strong>!<br />Erro: ${erro}`); // console.error("Erro:", erro)
 	
 });

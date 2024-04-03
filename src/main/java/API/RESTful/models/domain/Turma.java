@@ -6,12 +6,12 @@ public class Turma {
 	
 	private int id;
 	// private List<Aluno> alunos;
-	private List<Professor> professor;
+	private List<Professor> professores;
 	private Escola escola;
 	
-	public Turma(int id, List<Professor> professor, Escola escola) {
+	public Turma(int id, List<Professor> professores, Escola escola) {
 		this.id = id;
-		this.professor = professor;
+		this.professores = professores;
 		this.escola = escola;
 	}
 	
@@ -21,11 +21,11 @@ public class Turma {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public List<Professor> getProfessor() {
-		return professor;
+	public List<Professor> getProfessores() {
+		return professores;
 	}
 	public void setProfessor(List<Professor> professor) {
-		this.professor = professor;
+		this.professores = professor;
 	}
 	public Escola getEscola() {
 		return escola;
@@ -36,7 +36,7 @@ public class Turma {
 	
 	@Override
 	public String toString() {
-		return String.format("ID: %d\nProfessor(es): %h\nEscola: %h", id, professor, escola);
+		return String.format("ID: %d, Professor(es): %s, Escola: %s", id, professores, escola);
 	}
 	
 }

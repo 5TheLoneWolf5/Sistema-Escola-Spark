@@ -39,7 +39,7 @@ public class Aluno extends Pessoa {
 	
 	@Override
 	public String toString() {
-		return String.format("ID: %d\nNome: %s\nIdade: %d\nPrecisa de Acomodações: %b\nTurma: %h\nCompetências: %h", super.getId(), super.getNome(), super.getIdade(), precisaAcomodacoes, turma, competencias);
+		return String.format("ID: %d, Nome: %s, Idade: %d, Precisa de Acomodações: %b, Turma: %h, Competências: %s", super.getId(), super.getNome(), super.getIdade(), precisaAcomodacoes, turma, String.join(", ", competencias));
 	}
 	
 }

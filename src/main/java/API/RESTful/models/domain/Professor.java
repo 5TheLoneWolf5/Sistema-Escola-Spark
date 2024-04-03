@@ -42,7 +42,7 @@ public class Professor extends Pessoa {
 	
 	@Override
 	public String toString() {
-		return String.format("ID: %d\nNome: %s\nIdade: %d\nPeríodo: %s\nTurmas: %h\nSalário: %f", super.getId(), super.getNome(), super.getIdade(), periodo, salario);
+		return String.format("ID: %d, Nome: %s, Idade: %d, Período: %s, Salário: %f, Matérias: %s", super.getId(), super.getNome(), super.getIdade(), periodo, salario, materias);
 	}
 	
 }

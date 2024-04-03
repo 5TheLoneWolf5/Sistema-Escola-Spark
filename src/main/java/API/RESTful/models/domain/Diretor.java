@@ -39,7 +39,7 @@ public class Diretor extends Pessoa {
 	
 	@Override
 	public String toString() {
-		return String.format("ID: %d\nNome: %s\nIdade: %d\nSalário: %f\nPremiações: %d\nObjetivos: %h", super.getId(), super.getNome(), super.getIdade(), salario, premiacoes, objetivos);
+		return String.format("ID: %d, Nome: %s, Idade: %d, Salário: %f, Premiações: %d, Objetivos: %s", super.getId(), super.getNome(), super.getIdade(), salario, premiacoes, String.join(", ", objetivos));
 	}
 	
 }

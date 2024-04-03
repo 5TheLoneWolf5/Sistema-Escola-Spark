@@ -2,9 +2,7 @@ package API.RESTful.controllers;
 
 import com.google.gson.Gson;
 
-import API.RESTful.models.domain.Escola;
 import API.RESTful.models.domain.Turma;
-import API.RESTful.models.services.EscolaService;
 import API.RESTful.models.services.TurmaService;
 import spark.Route;
 
@@ -29,26 +27,26 @@ public class TurmaController {
 	
 	public static Route obterLista = (req, res) -> {
 		
-		return EscolaService.obterLista();
+		return TurmaService.obterLista();
 		
 	};
 	
 	public static Route incluir = (req, res) -> {
 		
-		Escola escola = new Gson().fromJson(req.body(), Escola.class);
+		Turma turma = new Gson().fromJson(req.body(), Turma.class);
 		
-		EscolaService.incluir(escola);
+		TurmaService.incluir(turma);
 		
-		return escola.getNome();
+		return turma.getId();
 	};
 	
 	public static Route excluir = (req, res) -> {
 		
 		Integer index = Integer.valueOf(req.params("id"));
 		
-		Escola escola = EscolaService.obter(index); // Getting this var before it is deleted.
+		Turma escola = TurmaService.obter(index); // Getting this var before it is deleted.
 		
-		EscolaService.excluir(index);
+		TurmaService.excluir(index);
 		
 		return "" + escola;
 	};
@@ -57,9 +55,9 @@ public class TurmaController {
 		
 		Integer index = Integer.valueOf(req.params("id"));
 		
-		Escola escola = EscolaService.obter(index);
+		Turma turma = TurmaService.obter(index);
 		
-		return "" + escola;
+		return turma.toString();
 	};
 	
 public static Route atualizar = (req, res) -> {

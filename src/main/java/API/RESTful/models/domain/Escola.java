@@ -40,7 +40,7 @@ public class Escola {
 	
 	@Override
 	public String toString() {
-		return String.format("Id: %d\nNome: %s\nDiretor: %h", id, nome, diretor);
+		return String.format("Id: %d, Nome: %s, Diretor: %s", id, nome, diretor);
 	}
 	
 }

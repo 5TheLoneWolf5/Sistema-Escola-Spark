@@ -55,9 +55,20 @@ public static Route home = (req, res) -> {
 		
 		Integer index = Integer.valueOf(req.params("id"));
 		
-		Escola service = EscolaService.obter(index);
+		Escola escola = EscolaService.obter(index);
 		
-		return "" + service;
+		/* IDEA: String[] test = turma.toString().split(",");
+		
+		String resultado = <br />;
+		
+		for (int i = 0; i < test.length; i++) {
+			String[] currentField = test[i].split(":");
+			resultado = "<h2>" + currentField + "</h2><hr />";
+		}
+		
+		return turma; */
+		
+		return "" + escola;
 	};
 	
 	public static Route atualizar = (req, res) -> {

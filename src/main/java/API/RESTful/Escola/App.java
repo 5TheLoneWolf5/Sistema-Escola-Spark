@@ -36,7 +36,7 @@ public class App
         Spark.get("/professor/obter-lista", ProfessorController.obterLista);
         Spark.put("/professor/atualizar/:id", ProfessorController.atualizar);
 	        
-	     // Rotas de "Turma".
+	    // Rotas de "Turma".
         Spark.get("/turma", TurmaController.home);
         Spark.post("/turma/incluir", TurmaController.incluir);
         Spark.delete("/turma/deletar/:id", TurmaController.excluir);
@@ -44,7 +44,7 @@ public class App
         Spark.get("/turma/obter-lista", TurmaController.obterLista);
         Spark.put("/turma/atualizar/:id", TurmaController.atualizar);
 	        
-	     // Rotas de "Diretor".
+	    // Rotas de "Diretor".
         Spark.get("/diretor", DiretorController.home);
         Spark.post("/diretor/incluir", DiretorController.incluir);
         Spark.delete("/diretor/deletar/:id", DiretorController.excluir);
@@ -52,7 +52,7 @@ public class App
         Spark.get("/diretor/obter-lista", DiretorController.obterLista);
         Spark.put("/diretor/atualizar/:id", DiretorController.atualizar);
 	        
-	     // Rotas de "Escola".
+	    // Rotas de "Escola".
         Spark.get("/escola", EscolaController.home);
         Spark.post("/escola/incluir", EscolaController.incluir);
         Spark.delete("/escola/deletar/:id", EscolaController.excluir);
@@ -60,7 +60,7 @@ public class App
         Spark.get("/escola/obter-lista", EscolaController.obterLista);
         Spark.put("/escola/atualizar/:id", EscolaController.atualizar);
         
-         // Rota de "ViaCep".
+        // Rota de "ViaCep".
         Spark.get("/viacep/:cep", ViaCepController.getAddress);
         
         // There needs to be at least 1 HTTP method in order for the program to run.

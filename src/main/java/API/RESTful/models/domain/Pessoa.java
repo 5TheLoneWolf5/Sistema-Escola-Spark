@@ -39,6 +39,7 @@ public abstract class Pessoa {
 
 	@Override
 	public String toString() {
-		return String.format("ID: %d\nNome: %s\nIdade: %d", id, nome, idade);
+		return String.format("ID: %d, Nome: %s, Idade: %d", id, nome, idade);
 	}
+	
 }
