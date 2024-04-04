@@ -31,8 +31,14 @@ public class EscolaService {
 		return escolas.get(id);
 	}
 	
-	public static void atualizar(Escola escola) {
-		escolas.replace(escola.getId(), escola);
+	public static void atualizar(Integer indexAntigo, Escola escolaAtualizacao) {
+		
+		if (escolas.containsKey(indexAntigo)) {
+			excluir(indexAntigo); // In case there happens an ID change. The updated object would otherwise just be floating around.
+			escolas.put(escolaAtualizacao.getId(), escolaAtualizacao); // Not "replace", because "replace" does not change the key.
+		} else {
+			System.out.println("\nEscola não existe.\n");
+		}
 	}
 	
 }

@@ -64,13 +64,15 @@ public class AlunoController {
 	
 	public static Route atualizar = (req, res) -> {
 		
-		Integer index = Integer.valueOf(req.params("id"));
+		Integer indexAntigo = Integer.valueOf(req.params("id"));
 		
-		Aluno aluno = AlunoService.obter(index);
+		// Aluno alunoAntigo = AlunoService.obter(index);
 		
-		AlunoService.atualizar(aluno);
+		Aluno alunoAtualizacao = new Gson().fromJson(req.body(), Aluno.class);
 		
-		return "" + aluno;
+		AlunoService.atualizar(indexAntigo, alunoAtualizacao);
+		
+		return "" + alunoAtualizacao;
 	};
 	
 }

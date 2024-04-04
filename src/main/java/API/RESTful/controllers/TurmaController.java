@@ -60,15 +60,17 @@ public class TurmaController {
 		return turma.toString();
 	};
 	
-public static Route atualizar = (req, res) -> {
+	public static Route atualizar = (req, res) -> {
 		
-		Integer index = Integer.valueOf(req.params("id"));
+		Integer indexAntigo = Integer.valueOf(req.params("id"));
 		
-		Turma turma = TurmaService.obter(index);
+		// Turma turmaAntiga = TurmaService.obter(index);
 		
-		TurmaService.atualizar(turma);
+		Turma turmaAtualizacao = new Gson().fromJson(req.body(), Turma.class);
 		
-		return "" + turma;
+		TurmaService.atualizar(indexAntigo, turmaAtualizacao);
+		
+		return "" + turmaAtualizacao;
 	};
 	
 }

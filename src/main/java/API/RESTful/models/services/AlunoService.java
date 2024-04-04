@@ -31,8 +31,14 @@ public class AlunoService {
 		return alunos.get(id);
 	}
 	
-	public static void atualizar(Aluno aluno) {
-		alunos.replace(aluno.getId(), aluno);
+	public static void atualizar(Integer indexAntigo, Aluno alunoAtualizacao) {
+		
+		if (alunos.containsKey(indexAntigo)) {
+			excluir(indexAntigo);
+			alunos.put(alunoAtualizacao.getId(), alunoAtualizacao);
+		} else {
+			System.out.println("\nAluno não existe.\n");
+		}
 	}
 
 }

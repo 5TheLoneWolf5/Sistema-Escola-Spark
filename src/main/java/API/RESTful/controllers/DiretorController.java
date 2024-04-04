@@ -60,14 +60,16 @@ public class DiretorController {
 		return "" + diretor;
 	};
 	
-public static Route atualizar = (req, res) -> {
+	public static Route atualizar = (req, res) -> {
 		
-		Integer index = Integer.valueOf(req.params("id"));
+		Integer indexAntigo = Integer.valueOf(req.params("id"));
 		
-		Diretor diretor = DiretorService.obter(index);
+		// Diretor diretorAntigo = DiretorService.obter(index);
 		
-		DiretorService.atualizar(diretor);
+		Diretor diretorAtualizacao = new Gson().fromJson(req.body(), Diretor.class);
 		
-		return "" + diretor;
+		DiretorService.atualizar(indexAntigo, diretorAtualizacao);
+		
+		return "" + diretorAtualizacao;
 	};
 }

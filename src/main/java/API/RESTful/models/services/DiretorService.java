@@ -31,8 +31,14 @@ private static Map<Integer, Diretor> diretores  = new HashMap<Integer, Diretor>(
 		return diretores.get(id);
 	}
 	
-	public static void atualizar(Diretor diretor) {
-		diretores.replace(diretor.getId(), diretor);
+	public static void atualizar(Integer indexAntigo, Diretor diretorAtualizacao) {
+		
+		if (diretores.containsKey(indexAntigo)) {
+			excluir(indexAntigo);
+			diretores.put(diretorAtualizacao.getId(), diretorAtualizacao);
+		} else {
+			System.out.println("\nDiretor não existe.\n");
+		}
 	}
 	
 }

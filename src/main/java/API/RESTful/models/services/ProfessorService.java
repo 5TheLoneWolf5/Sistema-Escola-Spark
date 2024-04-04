@@ -31,8 +31,13 @@ public class ProfessorService {
 		return professores.get(id);
 	}
 	
-	public static void atualizar(Professor professor) {
-		professores.replace(professor.getId(), professor);
+	public static void atualizar(Integer indexAntigo, Professor professorAtualizacao) {
+		
+		if (professores.containsKey(indexAntigo)) {
+			excluir(indexAntigo);
+			professores.put(professorAtualizacao.getId(), professorAtualizacao);
+		} else {
+			System.out.println("\nProfessor não existe.\n");
+		}
 	}
-	
 }

@@ -73,13 +73,15 @@ public static Route home = (req, res) -> {
 	
 	public static Route atualizar = (req, res) -> {
 		
-		Integer index = Integer.valueOf(req.params("id"));
+		Integer indexAntigo = Integer.valueOf(req.params("id"));
 		
-		Escola escola = EscolaService.obter(index);
+		// Escola escolaAntiga = EscolaService.obter(index);
 		
-		EscolaService.atualizar(escola);
+		Escola escolaAtualizacao = new Gson().fromJson(req.body(), Escola.class);
 		
-		return "" + escola;
+		EscolaService.atualizar(indexAntigo, escolaAtualizacao);
+		
+		return "" + escolaAtualizacao;
 	};
 	
 }
