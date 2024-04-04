@@ -43,12 +43,9 @@ cepBotao.addEventListener("click", event => {
 		.then(json => {
 			
 			jsonString = JSON.stringify(json);
-			console.log(jsonString)
 			
 			jsonString = jsonString.replace(/"|{|}/gi, "");
-			console.log(jsonString)
 			const array = jsonString.split(",");
-			console.log(array)
 			let result = "<br />"; // If value is undefined, it will therefore print "undefined".
 			
 			for (let i = 0; i < array.length; i++) {

@@ -10,7 +10,16 @@ public class TurmaController {
 
 	public static Route home = (req, res) -> {
 		
-		String html = "<h2>Incluir:</h2>"
+		String html = "<head>"
+				+ "<meta charset=\"utf-8\" />"
+				+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />"
+				+ "<meta name=\"description\" content=\"\" />"
+				+ "<meta name=\"author\" content=\"\" />"
+				+ "<title>Turma</title>"
+				+ "<link rel=\"icon\" type=\"image/x-icon\" href=\"./Infnet_Fundo_Branco.png\" />"
+				+ "<link href=\"./styles.css\" rel=\"stylesheet\" />"
+				+ "</head>"
+				+ "<div class=\"container-links\"><h2>Incluir:</h2>"
 				+  "<p>/turma/incluir</p>"
 				+ "<h2>Remover:</h2>"
 				+ "<p>/turma/deletar/:id</p>"
@@ -19,7 +28,7 @@ public class TurmaController {
 				+ "<h2>Obter Lista: </h2>"
 				+ "<p>/turma/obter-lista</p>"
 				+ "<h2>Atualizar:</h2>"
-				+ "<p>/turma/atualizar/:id</p>";
+				+ "<p>/turma/atualizar/:id</p></div>";
 		
 		return html;
 		

@@ -10,7 +10,16 @@ public class ProfessorController {
 	
 	public static Route home = (req, res) -> {
 		
-		String html = "<h2>Incluir:</h2>"
+		String html = "<head>"
+				+ "<meta charset=\"utf-8\" />"
+				+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />"
+				+ "<meta name=\"description\" content=\"\" />"
+				+ "<meta name=\"author\" content=\"\" />"
+				+ "<title>Professor</title>"
+				+ "<link rel=\"icon\" type=\"image/x-icon\" href=\"./Infnet_Fundo_Branco.png\" />"
+				+ "<link href=\"./styles.css\" rel=\"stylesheet\" />"
+				+ "</head>"
+				+ "<div class=\"container-links\"><h2>Incluir:</h2>"
 				+  "<p>/professor/incluir</p>"
 				+ "<h2>Remover:</h2>"
 				+ "<p>/professor/deletar/:id</p>"
@@ -19,7 +28,7 @@ public class ProfessorController {
 				+ "<h2>Obter Lista: </h2>"
 				+ "<p>/professor/obter-lista</p>"
 				+ "<h2>Atualizar:</h2>"
-				+ "<p>/professor/atualizar/:id</p>";
+				+ "<p>/professor/atualizar/:id</p></div>";
 		
 		return html;
 		
@@ -32,8 +41,6 @@ public class ProfessorController {
 	};
 	
 	public static Route incluir = (req, res) -> {
-		
-		// String nome = req.params("nome");
 		
 		Professor professor = new Gson().fromJson(req.body(), Professor.class);
 		
