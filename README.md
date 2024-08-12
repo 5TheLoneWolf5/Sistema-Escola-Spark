@@ -13,3 +13,5 @@ Assessment and Grades: Manage assessments and store grades securely.
 * HTML/CSS: Frontend design and layout.
 * JavaScript: Client-side scripting.
 * Maven: Project management and build automation.
+* Spark: Micro-framework used to build the web application.
+* JUnit: Comprehensive unit testing to verify the functionality of components and services.
