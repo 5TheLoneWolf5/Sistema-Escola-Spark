@@ -1,4 +1,4 @@
-# Sistema de Gerencimanto Escolar RESTful com Java, Maven, JUnit e Spark
+# Sistema de Gerencimanto Escolar
 
 Sistema-Escola-Spark is a comprehensive school management system. The project is designed to streamline and automate various school operations, providing an efficient and user-friendly interface. The backend provides a RESTful API to manage students, teachers, and classes. It supports managing student and teacher data, creating and managing classes, and handling scheduling and assignments.
 
