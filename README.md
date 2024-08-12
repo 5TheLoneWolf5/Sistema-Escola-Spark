@@ -1,6 +1,6 @@
 # Sistema-Escola-Spark
 
-Sistema-Escola-Spark is a comprehensive school management system developed for Web Services Development and Testing with Java. The project is designed to streamline and automate various school operations, providing an efficient and user-friendly interface.
+Sistema-Escola-Spark is a comprehensive school management system. The project is designed to streamline and automate various school operations, providing an efficient and user-friendly interface. The backend provides a RESTful API to manage students, teachers, and classes. It supports managing student and teacher data, creating and managing classes, and handling scheduling and assignments.
 
 ## Features
 Student and Teacher Management: Add, update, and manage records.
@@ -15,3 +15,4 @@ Assessment and Grades: Manage assessments and store grades securely.
 * Maven: Project management and build automation.
 * Spark: Micro-framework used to build the web application.
 * JUnit: Comprehensive unit testing to verify the functionality of components and services.
+* H2 Database: An in-memory database engine used for quick development and testing.
