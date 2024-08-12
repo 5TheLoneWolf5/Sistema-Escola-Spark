@@ -9,7 +9,7 @@ Attendance Tracking: Efficient tracking and recording of student attendance.
 Assessment and Grades: Manage assessments and store grades securely.
 
 ## Technologies Used
-Java: Backend logic and server operations.
-HTML/CSS: Frontend design and layout.
-JavaScript: Client-side scripting.
-Maven: Project management and build automation.
+* Java: Backend logic and server operations.
+* HTML/CSS: Frontend design and layout.
+* JavaScript: Client-side scripting.
+* Maven: Project management and build automation.
