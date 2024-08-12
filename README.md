@@ -15,4 +15,3 @@ Assessment and Grades: Manage assessments and store grades securely.
 * Maven: Project management and build automation.
 * Spark: Micro-framework used to build the web application.
 * JUnit: Comprehensive unit testing to verify the functionality of components and services.
-* H2 Database: An in-memory database engine used for quick development and testing.
