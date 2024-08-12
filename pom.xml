@@ -17,18 +17,17 @@
   </properties>
 
   <dependencies>
-	  
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+	  <dependency>
+		  <groupId>junit</groupId>
+		  <artifactId>junit</artifactId>
+		  <version>3.8.1</version>
+		  <scope>test</scope>
+	  </dependency>
 	  
 	  <dependency>
-	    <groupId>com.sparkjava</groupId>
-	    <artifactId>spark-core</artifactId>
-	    <version>2.9.4</version>
+		  <groupId>com.sparkjava</groupId>
+		  <artifactId>spark-core</artifactId>
+		  <version>2.9.4</version>
 	  </dependency>
 
 	  <dependency>
@@ -38,9 +37,9 @@
 	  </dependency>
 
 	  <dependency>
-	  	<groupId>br.edu.infnet</groupId>
-	  	<artifactId>elberthmoraes</artifactId>
-	  	<version>0.0.1-SNAPSHOT</version>
+		  <groupId>br.edu.infnet</groupId>
+		  <artifactId>elberthmoraes</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
 	  </dependency>
   </dependencies>
   
